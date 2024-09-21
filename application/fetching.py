@@ -26,7 +26,7 @@ class SpotifyAPI:
         response.raise_for_status()
         data = response.json()
         
-        for track in data['tracks']['items']:
+        for track in data['items']:
             playlist_content.append(track['track']['uri'])
 
         return playlist_content
